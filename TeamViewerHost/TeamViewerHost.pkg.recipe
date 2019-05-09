@@ -37,6 +37,26 @@
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
 		</dict>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/TeamViewerHostApp.pkg/Payload</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
+		</dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack/TeamViewerHost.app/Contents/Info.plist</string>
+            </dict>
+            <key>Processor</key>
+            <string>Versioner</string>
+        </dict>
     </array>
 </dict>
 </plist>
