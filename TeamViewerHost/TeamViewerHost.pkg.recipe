@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Wireshark and builds a pkg.</string>
 	<key>Identifier</key>
-	<string>com.github.flywire.pkg.TeamViewerHost</string>
+	<string>com.github.peertransfer.pkg.TeamViewerHost</string>
 	<key>Process</key>
 	<array>
 		<dict>
