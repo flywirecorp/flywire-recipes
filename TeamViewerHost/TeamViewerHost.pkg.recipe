@@ -3,11 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Wireshark and builds a pkg.</string>
+	<string>Downloads the latest version of TeamViewerHost and builds a pkg.</string>
 	<key>Identifier</key>
 	<string>com.github.peertransfer.pkg.TeamViewerHost</string>
     <key>ParentRecipe</key>
     <string>io.github.hjuutilainen.download.TeamViewerHost</string>
+    <key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>TeamViewerHost</string>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -20,6 +25,28 @@
 			</dict>
 			<key>Processor</key>
 			<string>FlatPkgUnpacker</string>
+		</dict>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
+				<key>pkgdirs</key>
+				<dict/>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/TeamViewerHostApp.pkg/Payload</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
 		</dict>
     </array>
 </dict>
