@@ -5,18 +5,16 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Fuze and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.peertransfer.pkg.Fuze</string>
+	<string>com.github.flywire.pkg.Fuze</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.fuzebox.fuze.Fuze</string>
 		<key>NAME</key>
 		<string>Fuze</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peertransfer.download.Fuze</string>
+	<string>com.github.flywire.download.Fuze</string>
 	<key>Process</key>
 	<array>
 		<dict>
